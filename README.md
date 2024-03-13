@@ -289,3 +289,57 @@ Pertanyaan: Apa kekurangan yang mungkin terjadi jika menggunakan pendekatan pada
   - Potensi Konflik Nama Halaman: Risiko terjadinya konflik nama halaman jika nama halaman sama di tingkatan yang berbeda.
   - Pengaruh Terhadap Kinerja: Routing bersarang dapat mempengaruhi kinerja aplikasi karena setiap perubahan URL memicu proses rendering ulang.
   - Kesulitan dalam Pemeliharaan: Semakin kompleks struktur routing, semakin sulit untuk memelihara dan memperbarui kode, serta melacak dampak perubahan pada struktur routing.
+
+## **Praktikum 3: Membuat routing dinamis (Dynamic Routing)**
+---
+
+Membuat file `/products/page.tsx` yang berisi function component untuk menampilkan list dari products.
+
+- `src>app>products>page.tsx`
+
+```bash
+export default function ProductList() {
+  return (
+        <div>
+          <h1>Product List</h1>
+          <h2>Product 1</h2>
+          <h2>Product 2</h2>
+          <h2>Product 3</h2>
+        </div>
+  );
+}
+```
+
+Membuat file `page.tsx` pada lokasi `/app/products/[productId]`
+
+- `src>app>products>[productId]>page.tsx`
+
+```bash
+type Props = {
+  params: {
+        productId: string
+  }
+}
+
+export default function ProductDetails({ params }: Props) {
+  return (
+        <h1>Details about product {params.productId}</h1>
+  )
+}
+```
+
+Mengakses halaman `/products` dan `/products/1` pada browser. 
+
+- `/products`
+
+![Screenshot](assets-report/08.png)
+
+- `/products/1`
+
+![Screenshot](assets-report/09.png)
+
+Mengubah nilai `productId` dengan nilai lainnya.
+
+- `/products/marfad`
+
+![Screenshot](assets-report/10.png)
