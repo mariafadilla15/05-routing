@@ -55,3 +55,31 @@ export default function About() {
 
 ![Screenshot](assets-report/02.png)
 
+### **To do (1)**
+
+Membuat halaman `/profile` yang menampilkan isi biodata dengan menggunakan routing di NextJS.
+
+```bash
+export default function Profile() {
+    const biodata = {
+        nama: "Maria Fadilla",
+        jurusan: "Teknologi Informasi",
+        minat: "Seni dan Teknologi",
+        kontak: "mariafadilla15@gmail.com",
+    };
+
+    return (
+        <div>
+            <h1>Welcome to My Profile</h1>
+            <p>Nama    : {biodata.nama}</p>
+            <p>Jurusan : {biodata.jurusan}</p>
+            <p>Minat   : {biodata.minat}</p>
+            <p>Kontak  : {biodata.kontak}</p>
+        </div>
+    );
+}
+```
+
+Hasil tampilannya adalah sebagai berikut:
+
+![Screenshot](assets-report/03.png)
