@@ -14,8 +14,10 @@ https://github.com/mariafadilla15/Pemrograman-Berbasis-Framework.git
 | Nama |  Maria Fadilla |
 | Kelas | TI - 3A |
 
+<br>
 
 ## **Praktikum 1: Membuat Routing Sederhana**
+---
 
 Mempersiapkan project dengan memanfaatkan template repository yang telah dipersiapkan di alamat https://github.com/dhanifudin/routing-demo dan menggunakan tombol Use this template kemudian memilih Create a new repository.
 
@@ -57,29 +59,84 @@ export default function About() {
 
 ### **To do (1)**
 
-Membuat halaman `/profile` yang menampilkan isi biodata dengan menggunakan routing di NextJS.
+- Membuat halaman `/profile` yang menampilkan isi biodata dengan menggunakan routing di NextJS.
 
 ```bash
+const baseUrl = 'https://i.imgur.com/';
+const biodata = {
+    imageId: '5Q2oUMg',
+    imageSize: 'b',
+    nama: "Maria Fadilla",
+    jurusan: "Teknologi Informasi",
+    minat: "Seni dan Teknologi",
+    kontak: "mariafadilla15@gmail.com",
+    headingStyle: {
+        backgroundColor: 'lightGrey',
+        color: 'navy'
+    },
+};
+
 export default function Profile() {
-    const biodata = {
-        nama: "Maria Fadilla",
-        jurusan: "Teknologi Informasi",
-        minat: "Seni dan Teknologi",
-        kontak: "mariafadilla15@gmail.com",
-    };
+
+    const { headingStyle } = biodata;
 
     return (
         <div>
-            <h1>Welcome to My Profile</h1>
-            <p>Nama    : {biodata.nama}</p>
-            <p>Jurusan : {biodata.jurusan}</p>
-            <p>Minat   : {biodata.minat}</p>
-            <p>Kontak  : {biodata.kontak}</p>
+            <div style={headingStyle}>
+                <h1>Welcome to My Profile</h1>
+            </div>
+            <div>
+                <img
+                    className="avatar"
+                    src={`${baseUrl}${biodata.imageId}${biodata.imageSize}.jpeg`}
+                />
+                <p>Nama    : {biodata.nama}</p>
+                <p>Jurusan : {biodata.jurusan}</p>
+                <p>Minat   : {biodata.minat}</p>
+                <p>Kontak  : {biodata.kontak}</p>
+            </div>
         </div>
     );
 }
 ```
 
-Hasil tampilannya adalah sebagai berikut:
+- Hasil tampilannya adalah sebagai berikut:
 
 ![Screenshot](assets-report/03.png)
+
+## **Praktikum 2: Membuat routing bersarang (Nested Routing)**
+---
+
+Menambahkan susunan folder `/blogs/first` dan `/blogs/second`. Kemudian menambahkan masing-masing untuk setiap folder dengan file `page.tsx`.
+
+![Screenshot](assets-report/04.png)
+
+Membuat function component pada file `/blogs/page.tsx`.
+
+```bash
+export default function Blog() {
+  return (
+        <h1>Blog</h1>
+  );
+}
+```
+
+Membuat function component pada file `/blogs/first/page.tsx`.
+
+```bash
+export default function FirstBlog() {
+  return (
+        <h1>First Blog</h1>
+  );
+}
+```
+
+Mengakses halaman `/blogs` dan `/blogs/first` pada browser.
+
+- `/blogs`
+
+![Screenshot](assets-report/05.png)
+
+- `/blogs/first`
+
+![Screenshot](assets-report/06.png)
