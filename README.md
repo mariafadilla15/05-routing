@@ -278,3 +278,14 @@ export default function BlogSecond() {
 - Hasil tampilannya adalah sebagai berikut:
 
 ![Screenshot](assets-report/07.png)
+
+### **Jawaban Pertanyaan**
+
+Pertanyaan: Apa kekurangan yang mungkin terjadi jika menggunakan pendekatan pada Praktikum 2 untuk menangani routing?
+
+- Beberapa kekurangan yang mungkin terjadi jika menggunakan pendekatan pada Praktikum 2 untuk menangani routing, diantaranya:
+
+  - Kesulitan Navigasi yang Kompleks: Manajemen navigasi menjadi sulit saat jumlah routing bersarang meningkat.
+  - Potensi Konflik Nama Halaman: Risiko terjadinya konflik nama halaman jika nama halaman sama di tingkatan yang berbeda.
+  - Pengaruh Terhadap Kinerja: Routing bersarang dapat mempengaruhi kinerja aplikasi karena setiap perubahan URL memicu proses rendering ulang.
+  - Kesulitan dalam Pemeliharaan: Semakin kompleks struktur routing, semakin sulit untuk memelihara dan memperbarui kode, serta melacak dampak perubahan pada struktur routing.
