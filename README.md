@@ -440,3 +440,49 @@ export default function Home() {
 Hasil tampilannya adalah:
 
 ![Screenshoot](assets-report/14.png)
+
+### **To do (5)**
+
+Menambahkan link yang sebelumnya anda telah dikerjakan
+
+```bash
+export default function Home() {
+  return (
+    <div>
+      <div style={headingStyle}>
+        <h1>Welcome to Home</h1>
+      </div>
+      <ul>
+        <li><Link href='/profile'>Profile</Link></li> <br/>
+        <li><Link href='/about'>About</Link></li> <br/>
+        <li><Link href='/blogs'>Blogs</Link></li> <br/>
+        <li><Link href='/products'>Products</Link></li> <br/>
+      </ul>
+    </div>
+  );
+}
+```
+
+- Hasil tampilannya adalah:
+
+![Screenshoot](assets-report/15.png)
+
+- Update `/profile`
+
+![Screenshoot](assets-report/16.png)
+
+- Update `/about`
+
+![Screenshoot](assets-report/17.png)
+
+- Update `/blogs`
+
+![Screenshoot](assets-report/18.png)
+![Screenshoot](assets-report/19.png)
+![Screenshoot](assets-report/20.png)
+![Screenshoot](assets-report/21.png)
+
+- Update `/products`
+
+![Screenshoot](assets-report/22.png)
+![Screenshoot](assets-report/23.png)

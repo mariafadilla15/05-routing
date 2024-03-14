@@ -1,29 +1,26 @@
-const baseUrl = 'https://i.imgur.com/';
+import Link from "../../../../node_modules/next/link";
+
+const baseUrl = 'https://www.urbanplus.co.id/wp-content/uploads/2022/08/ikn_sip_02.jpg';
 
 const artikel = {
-    imageId: 'G0doLms',
-    imageSize: 'm',
-    judul: "Time For Healing: Finding Peace on the Beach",
-    isi: (
-        <div>
-            <p>
-                Liburan ke pantai seringkali dianggap sebagai salah satu cara terbaik untuk melepas penat dan menemukan kedamaian. Dengan deburan ombak yang menenangkan, pasir yang lembut di bawah kaki, dan panorama matahari terbenam yang memukau, pantai menjadi tempat sempurna untuk refreshing.
-            </p>
-            <p>
-                Berjalan di tepi pantai sambil mendengarkan suara alam, dapat membantu kita melupakan sejenak hiruk-pikuk kehidupan sehari-hari. Ini adalah waktu untuk menyembuhkan, baik secara fisik maupun emosional, dan untuk mengisi ulang energi kita.
-            </p>
-            <p>
-                Pantai juga menawarkan berbagai aktivitas yang dapat meningkatkan kesehatan mental kita, seperti berjalan kaki di tepi air, berenang, atau sekadar duduk dan membaca buku. Tidak ada yang lebih menyegarkan daripada menghirup udara segar pantai dan merasakan sinar matahari yang hangat di kulit.
-            </p>
-            <p>
-                Jadi, jika Anda merasa lelah dan ingin menyegarkan pikiran, pertimbangkan untuk berwisata ke pantai. Biarkan alam melakukan sihirnya dan bawa pulang kenangan indah serta semangat baru untuk menghadapi tantangan yang akan datang.
-            </p>
-        </div>
-    ),
     headingStyle: {
         backgroundColor: 'lightGrey',
         color: 'navy'
     },
+    judul: "A Global City For All: Nusantara Capital City (IKN)",
+    isi: (
+        <div>
+            <p>
+                Terletak di pantai timur Kalimantan, Ibu Kota Nusantara (IKN) adalah proyek ambisius Indonesia yang dirancang sebagai kota pintar yang berkelanjutan dan inklusif. Sebagai pusat pemerintahan baru yang juga menjadi simbol identitas nasional, IKN mengintegrasikan teknologi canggih dan prinsip-prinsip ramah lingkungan, dengan visi untuk menjadi kota global yang menjanjikan kemajuan, keberlanjutan, dan harmoni bagi semua warganya.
+            </p>
+            <p>
+                IKN bertujuan untuk menciptakan lingkungan yang ramah, inklusif, dan berkelanjutan bagi penduduknya. Dengan pendekatan yang holistik, IKN tidak hanya memperhatikan infrastruktur fisik, tetapi juga menitikberatkan pada aspek sosial, ekonomi, dan lingkungan. Melalui penggunaan teknologi terkini dan prinsip-prinsip desain yang ramah lingkungan, IKN berusaha menjadi contoh bagi kota-kota lain di dunia.
+            </p>
+            <p>
+                Sebagai pusat pertumbuhan ekonomi dan inovasi, IKN menawarkan peluang tak terbatas bagi para penduduknya. Dengan fokus pada pengembangan sumber daya manusia dan industri kreatif, IKN bertujuan untuk menciptakan ekosistem yang mendukung pertumbuhan ekonomi yang inklusif dan berkelanjutan.
+            </p>
+        </div>
+    )
 };
 
 export default function BlogFirst() {
@@ -35,13 +32,16 @@ export default function BlogFirst() {
             </div>
             <div>
                 <img
-                    className="firstBlog"
-                    src={`${baseUrl}${artikel.imageId}${artikel.imageSize}.jpeg`}
-                    alt="pantai"
+                    className="imageBlog"
+                    src={`${baseUrl}`}
+                    alt="IKN"
+                    style={{ width: '42%', height: 'auto' }}
                 />
             </div>
             <h2>{artikel.judul}</h2>
             {artikel.isi}
+            <br/>
+            <Link href='/blogs'>Back</Link>
         </div>
     );
 }

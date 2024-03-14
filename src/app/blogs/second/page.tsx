@@ -1,3 +1,5 @@
+import Link from "../../../../node_modules/next/link";
+
 const baseUrl = 'https://i.imgur.com/';
 
 const artikel = {
@@ -42,6 +44,8 @@ export default function BlogSecond() {
             </div>
             <h2>{artikel.judul}</h2>
             {artikel.isi}
+            <br/>
+            <Link href='/blogs'>Back</Link>
         </div>
     );
 }

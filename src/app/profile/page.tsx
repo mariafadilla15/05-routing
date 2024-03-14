@@ -1,3 +1,5 @@
+import Link from "../../../node_modules/next/link";
+
 const baseUrl = 'https://i.imgur.com/';
 const biodata = {
     imageId: '5Q2oUMg',
@@ -18,6 +20,8 @@ export default function Profile() {
 
     return (
         <div>
+            <br/>
+            <Link href='/'>Home</Link>
             <div style={headingStyle}>
                 <h1>Welcome to My Profile</h1>
             </div>
