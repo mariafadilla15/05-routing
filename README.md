@@ -59,7 +59,7 @@ export default function About() {
 
 ### **To do (1)**
 
-- Membuat halaman `/profile` yang menampilkan isi biodata dengan menggunakan routing di NextJS.
+Membuat halaman `/profile` yang menampilkan isi biodata dengan menggunakan routing di NextJS.
 
 ```bash
 const baseUrl = 'https://i.imgur.com/';
@@ -223,7 +223,7 @@ Mengakses halaman `/blogs` dan `/blogs/first` pada browser.
 
 ### **To do (2)**
 
-- Melengkapi function component pada `/blogs/second/page.tsx`.
+Melengkapi function component pada `/blogs/second/page.tsx`.
 
 ```bash
 const baseUrl = 'https://i.imgur.com/';
@@ -343,3 +343,71 @@ Mengubah nilai `productId` dengan nilai lainnya.
 - `/products/marfad`
 
 ![Screenshot](assets-report/10.png)
+
+### **To do (3)**
+
+Memperbaiki implementasi Praktikum 2 menggunakan Dynamic Routes
+
+- `src>app>blogs>[blogId]>page.tsx`
+
+```bash
+type Props = {
+    params: {
+          blogId: string
+    }
+}
+  
+export default function BlogDetails({ params }: Props) {
+    return (
+          <h1>Hello, this is {params.blogId} Blog</h1>
+    )
+}
+```
+
+- Hasil tampilannya adalah:
+
+![Screenshot](assets-report/11.png)
+
+### **To do (4)**
+
+Membuat halaman dengan routing `/products/[productId]/reviews/[reviewId]` dengan menggunakan konsep Nested Routes dan Dynamic Routes.
+
+- `src>app>products>[productId]>reviews>page.tsx`
+
+```bash
+export default function Reviews() {
+    return (
+          <div>
+            <h1>Review List</h1>
+            <h2>Review 1</h2>
+            <h2>Review 2</h2>
+            <h2>Review 3</h2>
+          </div>
+    )
+}
+```
+
+- Hasil tampilan `/products/[productId]/reviews`
+
+![Screenshoot](assets-report/12.png)
+
+- `src>app>products>[productId]>reviews>[reviewId]>page.tsx`
+
+```bash
+type Props = {
+    params: {
+      productId: string
+      reviewId: string
+    }
+  }
+  
+  export default function ProductDetails({ params }: Props) {
+    return (
+          <h1>Details about product {params.productId} review {params.reviewId}</h1>
+    )
+}
+```
+
+- Hasil tampilann `/products/[productId]/reviews/[reviewId]`
+
+![Screenshoot](assets-report/13.png)
