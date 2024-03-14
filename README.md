@@ -411,3 +411,32 @@ type Props = {
 - Hasil tampilann `/products/[productId]/reviews/[reviewId]`
 
 ![Screenshoot](assets-report/13.png)
+
+## **Praktikum 4: Navigasi dengan Link Component**
+---
+
+Menambahkan import Link komponen pada file `/app/page.tsx`
+
+```bash
+import Link from "next/link";
+```
+
+Menambahkan penggunaan Link komponen untuk mengakses halaman `/profile` dan `/about`
+
+```bash
+export default function Home() {
+  return (
+    <div>
+      <h1>Welcome to Home</h1>
+        <ul>
+          <li><Link href='/profile'>Profile</Link></li> <br/>
+          <li><Link href='/about'>About</Link></li> <br/>
+        </ul>
+    </div>
+  );
+}
+```
+
+Hasil tampilannya adalah:
+
+![Screenshoot](assets-report/14.png)
